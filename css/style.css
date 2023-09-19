@@ -7,6 +7,10 @@ body {
    font-family: 'Lato', sans-serif;
 }
 
+.honeypot-field {
+  display: none;
+}
+
 h1,h2,h3,h4,h5,h6 {
    font-weight: 700;
    letter-spacing: 1px;
@@ -303,4 +307,22 @@ footer .footer-links a {
 footer .social-icons a:hover,
 footer .footer-links a:hover {
    color: #E93B81;
+}
+
+
+.blink {
+   text-align: center;
+   animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
