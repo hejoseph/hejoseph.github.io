@@ -23,6 +23,12 @@ h1,h2,h3,h4,h5,h6 {
    letter-spacing: 1px;
 }
 
+.subtitle {
+   font-size: 12px;
+   letter-spacing: 1px;
+}
+
+
 a {
    font-weight: 700;
    transition: all 0.4s ease;
@@ -65,7 +71,7 @@ section {
 }
 
 #home {
-   background: linear-gradient(rgba(17, 36, 90, 0.8), rgba(17, 36, 90, 0.8)), url(../img/hero_img.jpg);
+   background: linear-gradient(rgba(28, 75, 210, 0.8), rgba(114, 0, 0, 0.8)), url(../img/hero_img.jpg);
    min-height: 100vh;
    background-size: cover;
    background-position: center;
