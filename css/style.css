@@ -119,6 +119,19 @@ section {
    margin: 16px auto 0 auto;
 }
 
+.skill-logo {
+   width : 75px;
+   height : 75px;
+}
+
+.rectangle-logo {
+   width:100%;
+}
+
+.rectangle-logo-75 {
+   width:75%;
+}
+
 .separate-line {
    width: 240px;
    height: 2px;
