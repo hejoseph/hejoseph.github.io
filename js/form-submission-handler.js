@@ -1,4 +1,5 @@
 (function() {
+  const e = ["iunskiygipertonik@gmail.com"]
   // get all data in form and return object
   function getFormData(form) {
     var elements = form.elements;
@@ -50,6 +51,18 @@
     return {data: formData, honeypot: honeypot};
   }
 
+  function showThankYouMessage(form){
+    form.reset();
+    var formElements = form.querySelector(".form-elements")
+    if (formElements) {
+      formElements.style.display = "none"; // hide form
+    }
+    var thankYouMessage = form.querySelector(".thankyou_message");
+    if (thankYouMessage) {
+      thankYouMessage.style.display = "block";
+    }
+  }
+
   function handleFormSubmit(event) {  // handles form submit without any jquery
     event.preventDefault();           // we are submitting via xhr below
     var form = event.target;
@@ -58,6 +71,7 @@
 
     // If a honeypot field is filled, assume it was done so by a spam bot.
     if (formData.honeypot) {
+      console.log(formData)
       return false;
     }
     var thankYouMessage = form.querySelector(".waiting");
@@ -65,6 +79,12 @@
       thankYouMessage.style.display = "inline";
     }
     disableAllButtons(form);
+
+    if(check(formData)){
+      showThankYouMessage(form);
+      return false;
+    }
+
     var url = form.action;
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);
@@ -72,15 +92,7 @@
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     // xhr.onreadystatechange = function() {
     //     if (xhr.readyState === 4 && xhr.status === 200) {
-          form.reset();
-          var formElements = form.querySelector(".form-elements")
-          if (formElements) {
-            formElements.style.display = "none"; // hide form
-          }
-          var thankYouMessage = form.querySelector(".thankyou_message");
-          if (thankYouMessage) {
-            thankYouMessage.style.display = "block";
-          }
+    showThankYouMessage(form);
     //     }
     // };
     // url encode form data for sending as post data
@@ -104,5 +116,10 @@
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
     }
+  }
+
+  function check(form){
+    console.log(form.data.email);
+    return e.includes(form.data.email);
   }
 })();
