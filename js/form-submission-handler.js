@@ -70,17 +70,17 @@
     var data = formData.data;
 
     // If a honeypot field is filled, assume it was done so by a spam bot.
-    if (formData.honeypot) {
-      console.log(formData)
-      return false;
-    }
+    // if (formData.honeypot) {
+    //   console.log(formData)
+    //   return false;
+    // }
     var thankYouMessage = form.querySelector(".waiting");
     if (thankYouMessage) {
       thankYouMessage.style.display = "inline";
     }
     disableAllButtons(form);
 
-    if(check(formData)){
+    if(check(formData) || formData.honeypot){
       showThankYouMessage(form);
       return false;
     }
