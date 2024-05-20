@@ -69,6 +69,14 @@
     var formData = getFormData(form);
     var data = formData.data;
 
+    var captchaError = form.querySelector(".error-captcha");
+    const captchaResponse = grecaptcha.getResponse();
+    if(!captchaResponse.length>0){
+      captchaError.style.display = "block";
+      throw new Error("Captcha not complete");
+    }
+    captchaError.style.display = "none";
+
     // If a honeypot field is filled, assume it was done so by a spam bot.
     // if (formData.honeypot) {
     //   console.log(formData)
