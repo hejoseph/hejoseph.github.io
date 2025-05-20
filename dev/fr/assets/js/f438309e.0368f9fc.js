@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmydevdocs=self.webpackChunkmydevdocs||[]).push([[2375],{3843:a=>{a.exports=JSON.parse('{"tags":[{"label":"java","permalink":"/dev/fr/docs/tags/java","count":1},{"label":"optimization","permalink":"/dev/fr/docs/tags/optimization","count":1},{"label":"garbage collection","permalink":"/dev/fr/docs/tags/garbage-collection","count":1}]}')}}]);

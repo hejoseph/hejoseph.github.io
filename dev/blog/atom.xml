@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hejoseph.com/dev/blog</id>
-    <title>My Sites Blog</title>
+    <title>Tech Journey Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hejoseph.com/dev/blog"/>
-    <subtitle>My Sites Blog</subtitle>
+    <subtitle>Tech Journey Blog</subtitle>
     <icon>https://hejoseph.com/dev/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
