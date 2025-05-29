@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-tech-related/clean code/clean-code-basics" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">Clean Code Principles | Tech Journey</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://hejoseph.com/dev/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://hejoseph.com/dev/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://hejoseph.com/dev/docs/tech-related/clean code/clean-code-basics"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Clean Code Principles | Tech Journey"><meta data-rh="true" name="description" content="clean-code-representation.png"><meta data-rh="true" property="og:description" content="clean-code-representation.png"><link data-rh="true" rel="icon" href="/dev/img/brand_icon.ico"><link data-rh="true" rel="canonical" href="https://hejoseph.com/dev/docs/tech-related/clean code/clean-code-basics"><link data-rh="true" rel="alternate" href="https://hejoseph.com/dev/docs/tech-related/clean code/clean-code-basics" hreflang="en"><link data-rh="true" rel="alternate" href="https://hejoseph.com/dev/fr/docs/tech-related/clean code/clean-code-basics" hreflang="fr"><link data-rh="true" rel="alternate" href="https://hejoseph.com/dev/docs/tech-related/clean code/clean-code-basics" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/dev/blog/rss.xml" title="Tech Journey RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/dev/blog/atom.xml" title="Tech Journey Atom Feed"><link rel="stylesheet" href="/dev/assets/css/styles.d3fe05ca.css">
+<script src="/dev/assets/js/runtime~main.8a7a4bf7.js" defer="defer"></script>
+<script src="/dev/assets/js/main.705cad52.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="https://hejoseph.com/img/brand_icon.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/dev/"><div class="navbar__logo"><img src="https://hejoseph.com/img/brand_icon.png" alt="Joseph" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="https://hejoseph.com/img/brand_icon.png" alt="Joseph" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Joseph</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/dev/docs/category/java">Docs</a></div><div class="navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/dev/docs/tech-related/clean code/clean-code-basics" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en">English</a></li><li><a href="/dev/fr/docs/tech-related/clean code/clean-code-basics" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="fr">Français</a></li></ul></div><a href="https://github.com/hejoseph" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/dev/docs/category/java">Java</a><button aria-label="Expand sidebar category &#x27;Java&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/dev/docs/category/javascript">Javascript</a><button aria-label="Expand sidebar category &#x27;Javascript&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/dev/docs/category/react">React</a><button aria-label="Expand sidebar category &#x27;React&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/dev/docs/category/tech-related">Tech Related</a><button aria-label="Collapse sidebar category &#x27;Tech Related&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dev/docs/tech-related/m3u8">How M3U8 works on VLC</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/dev/docs/tech-related/Huggingface/huggingface-intro">Huggingface</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/dev/docs/tech-related/Langchain/langchain-intro">Langchain</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/dev/docs/tech-related/clean code/clean-code-basics">clean code</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/dev/docs/tech-related/clean code/clean-code-basics">Clean Code Principles</a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dev/docs/tech-related/microservices-architecture">Microservices Architecture</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/dev/docs/Git/master-git">Git</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/dev/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/dev/docs/category/tech-related"><span itemprop="name">Tech Related</span></a><meta itemprop="position" content="1"></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">clean code</span><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Clean Code Principles</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Clean Code Principles</h1></header>
+<p><img decoding="async" loading="lazy" alt="clean-code-representation.png" src="/dev/assets/images/clean-code-representation-0887e99ada29800b1759fba302597c26.png" width="512" height="360" class="img_ev3q"></p>
+<p>The book &quot;Clean Code&quot; emphasizes the fundamental importance of writing clean and readable code for maintainability, scalability, and collaboration in software projects. Below is a structured summary of its main themes and essential ideas.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="key-themes-and-essential-ideas">Key Themes and Essential Ideas<a href="#key-themes-and-essential-ideas" class="hash-link" aria-label="Direct link to Key Themes and Essential Ideas" title="Direct link to Key Themes and Essential Ideas">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-meaningful-names">1. Meaningful Names<a href="#1-meaningful-names" class="hash-link" aria-label="Direct link to 1. Meaningful Names" title="Direct link to 1. Meaningful Names">​</a></h3>
+<ul>
+<li><strong>Avoid Mental Mapping:</strong> Names should use terms from the problem or solution domain, so readers don&#x27;t have to mentally translate them.<!-- -->
+<blockquote>
+<p>&quot;Readers shouldn’t have to mentally translate your names into other names they already know.&quot;</p>
+</blockquote>
+</li>
+<li><strong>Avoid Single-Letter Names:</strong> Except for very limited scopes (like loop counters), single-letter names should be avoided.<!-- -->
+<blockquote>
+<p>&quot;There can be no worse reason for using the name c than because a and b were already taken.&quot;</p>
+</blockquote>
+</li>
+<li><strong>Short vs. Long Names:</strong> Shorter names are generally better if they are clear. Do not add unnecessary context.<!-- -->
+<blockquote>
+<p>&quot;Shorter names are generally better than longer ones, so long as they are clear. Add no more context to a name than is necessary.&quot;</p>
+</blockquote>
+</li>
+<li><strong>Clear Context:</strong> Names should have explicit context, as shown in the refactoring of <code>printGuessStatistics</code> to <code>GuessStatisticsMessage</code>.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-functions-do-one-thing">2. Functions: Do One Thing<a href="#2-functions-do-one-thing" class="hash-link" aria-label="Direct link to 2. Functions: Do One Thing" title="Direct link to 2. Functions: Do One Thing">​</a></h3>
+<ul>
+<li><strong>Single Responsibility Principle:</strong> Functions should do one thing and do it well. This is why functions should be short.<!-- -->
+<blockquote>
+<p>&quot;They should usually be shorter than Listing 3-2! Indeed, Listing 3-2 should really be shortened to Listing 3-3.&quot;</p>
+</blockquote>
+</li>
+<li><strong>Short Blocks and Indentation:</strong> Blocks inside <code>if</code>, <code>else</code>, <code>while</code>, etc., should ideally be one line, usually a function call, to improve readability.<!-- -->
+<blockquote>
+<p>&quot;This implies that the blocks within if statements, else statements, while statements, and so on should be one line long. Probably that line should be a function call.&quot;</p>
+</blockquote>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-comments">3. Comments<a href="#3-comments" class="hash-link" aria-label="Direct link to 3. Comments" title="Direct link to 3. Comments">​</a></h3>
+<ul>
+<li><strong>Avoid Bad Comments:</strong> Comments that are redundant, misleading, or used to mask poorly written code should be avoided.<!-- -->
+<blockquote>
+<p>&quot;Don’t Use a Comment When You Can Use a Function or a Variable&quot;</p>
+</blockquote>
+</li>
+<li><strong>Redundancy:</strong> Avoid comments that simply repeat what the code already expresses or are obvious (e.g., Javadocs on simple getters/setters).</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-formatting">4. Formatting<a href="#4-formatting" class="hash-link" aria-label="Direct link to 4. Formatting" title="Direct link to 4. Formatting">​</a></h3>
+<ul>
+<li><strong>Horizontal Alignment and Density:</strong> Use horizontal whitespace to associate related elements and separate unrelated ones. Surround assignment operators with whitespace for clarity.<!-- -->
+<blockquote>
+<p>&quot;I surrounded the assignment operators with white space to accentuate them.&quot;</p>
+</blockquote>
+</li>
+<li><strong>Operator Precedence:</strong> Formatting can help make equations more readable by reflecting operator precedence.</li>
+<li><strong>Indentation:</strong> Never break indentation rules, even for short statements. Proper indentation is crucial for readability and avoiding subtle errors.<!-- -->
+<blockquote>
+<p>&quot;Whenever I have succumbed to this temptation, I have almost always gone back and put the indentation back in.&quot;</p>
+</blockquote>
+</li>
+<li><strong>Silent Scopes:</strong> Loops with empty bodies should be formatted to make the semicolon visible and avoid subtle bugs.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-error-handling">5. Error Handling<a href="#5-error-handling" class="hash-link" aria-label="Direct link to 5. Error Handling" title="Direct link to 5. Error Handling">​</a></h3>
+<ul>
+<li><strong>Prefer Exceptions Over Return Codes:</strong> Use exceptions instead of error codes to keep code clean and separate error handling from normal flow.<!-- -->
+<ul>
+<li>Example: Throwing <code>InvalidArgumentException</code> for null arguments in <code>MetricsCalculator.xProjection</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-unit-testing">6. Unit Testing<a href="#6-unit-testing" class="hash-link" aria-label="Direct link to 6. Unit Testing" title="Direct link to 6. Unit Testing">​</a></h3>
+<ul>
+<li><strong>Test-Driven Development (TDD):</strong> TDD is fundamental for writing clean code. Well-written tests reveal general rules and help identify missing cases.<!-- -->
+<blockquote>
+<p>&quot;Stated like this, you can see that there is a general rule hiding amidst the miscellaneous tests. When you increment the month, the date can be no greater than the last day of the month.&quot;</p>
+</blockquote>
+</li>
+<li><strong>Useful Tests:</strong> Tests should expose the underlying rules of the code and guide further development.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="7-successive-refinement">7. Successive Refinement<a href="#7-successive-refinement" class="hash-link" aria-label="Direct link to 7. Successive Refinement" title="Direct link to 7. Successive Refinement">​</a></h3>
+<ul>
+<li><strong>Incremental Process:</strong> Writing clean code is an iterative process of successive refinements. Start with a draft and refactor in small steps to improve structure and readability.<!-- -->
+<blockquote>
+<p>&quot;I hope your initial reaction to this mass of code is “I’m certainly glad he didn’t leave it like that!”&quot;</p>
+</blockquote>
+</li>
+<li><strong>TDD Guides Refactoring:</strong> TDD helps keep code functional and guides the refactoring process.<!-- -->
+<blockquote>
+<p>&quot;To avoid this, I use the discipline of Test-Driven Development (TDD).&quot;</p>
+</blockquote>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="8-junit-internals">8. JUnit Internals<a href="#8-junit-internals" class="hash-link" aria-label="Direct link to 8. JUnit Internals" title="Direct link to 8. JUnit Internals">​</a></h3>
+<ul>
+<li><strong>Example of Clean Code:</strong> The analysis of JUnit&#x27;s <code>ComparisonCompactor</code> class demonstrates how even relatively clean code can be improved further.</li>
+<li><strong>Continuous Improvement:</strong> Always strive to leave the code a little better than you found it (&quot;the Boy Scout Rule&quot;).<!-- -->
+<blockquote>
+<p>&quot;But no module is immune from improvement, and each of us has the responsibility to leave the code a little better than we found it.&quot;</p>
+</blockquote>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="9-heuristics-and-code-smells">9. Heuristics and Code Smells<a href="#9-heuristics-and-code-smells" class="hash-link" aria-label="Direct link to 9. Heuristics and Code Smells" title="Direct link to 9. Heuristics and Code Smells">​</a></h3>
+<ul>
+<li><strong>Clear Names:</strong> Names are crucial for readability.<!-- -->
+<blockquote>
+<p>&quot;Names in software are 90 percent of what make software readable.&quot;</p>
+</blockquote>
+</li>
+<li><strong>Avoid Encodings:</strong> Names should not be cluttered with type or scope information (e.g., <code>m_</code>, <code>f_</code>).<!-- -->
+<blockquote>
+<p>&quot;Names should not be encoded with type or scope information.&quot;</p>
+</blockquote>
+</li>
+<li><strong>Single Responsibility Functions:</strong> Functions should not have multiple sections performing different operations. Break them into smaller functions.<!-- -->
+<blockquote>
+<p>&quot;It is often tempting to create functions that have multiple sections that perform a series of operations. Functions of this kind do more than one thing, and should be converted into many smaller functions, each of which does one thing.&quot;</p>
+</blockquote>
+</li>
+<li><strong>Separation of Abstraction Levels:</strong> Code should separate different abstraction levels, as shown in the refactoring of the <code>render()</code> function for the HTML <code>hr</code> tag.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="10-real-code-example">10. Real Code Example<a href="#10-real-code-example" class="hash-link" aria-label="Direct link to 10. Real Code Example" title="Direct link to 10. Real Code Example">​</a></h3>
+<ul>
+<li><strong>SerialDate Code Analysis:</strong> The appendices present the original and refactored versions of the <code>SerialDate</code> code, demonstrating practical application of clean code principles.</li>
+<li><strong>Test-Driven Refactoring:</strong> Associated tests validate changes during refactoring.</li>
+<li><strong>Introduction of New Classes:</strong> Refactoring introduces new classes (e.g., <code>DayDate</code>, <code>Month</code>, <code>Day</code>, <code>DateInterval</code>, <code>DateUtil</code>) to better organize code and respect single responsibility.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="key-quotes">Key Quotes<a href="#key-quotes" class="hash-link" aria-label="Direct link to Key Quotes" title="Direct link to Key Quotes">​</a></h2>
+<ul>
+<li>&quot;Readers shouldn’t have to mentally translate your names into other names they already know.&quot;</li>
+<li>&quot;There can be no worse reason for using the name c than because a and b were already taken.&quot;</li>
+<li>&quot;Shorter names are generally better than longer ones, so long as they are clear. Add no more context to a name than is necessary.&quot;</li>
+<li>&quot;Don’t Use a Comment When You Can Use a Function or a Variable&quot;</li>
+<li>&quot;Whenever I have succumbed to this temptation, I have almost always gone back and put the indentation back in.&quot;</li>
+<li>&quot;I hope your initial reaction to this mass of code is “I’m certainly glad he didn’t leave it like that!”&quot;</li>
+<li>&quot;To avoid this, I use the discipline of Test-Driven Development (TDD).&quot;</li>
+<li>&quot;Stated like this, you can see that there is a general rule hiding amidst the miscellaneous tests. When you increment the month, the date can be no greater than the last day of the month.&quot;</li>
+<li>&quot;But no module is immune from improvement, and each of us has the responsibility to leave the code a little better than we found it.&quot;</li>
+<li>&quot;Names in software are 90 percent of what make software readable.&quot;</li>
+<li>&quot;Names should not be encoded with type or scope information.&quot;</li>
+<li>&quot;It is often tempting to create functions that have multiple sections that perform a series of operations. Functions of this kind do more than one thing, and should be converted into many smaller functions, each of which does one thing.&quot;</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<p>The excerpts from &quot;Clean Code&quot; highlight the crucial importance of writing clean code as a foundation of professional software development. The book presents a set of principles and practices—from meaningful naming and concise functions to effective commenting, formatting, error handling, and unit testing. The main idea is that clean code is easier to read, understand, maintain, and extend, leading to better team productivity and higher software quality. Real-world refactoring examples, such as the <code>SerialDate</code> code, demonstrate the practical application of these principles and the iterative process of continuous code improvement.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a class="tag_zVej tagRegular_sFm0" href="/dev/docs/tags/clean-code">clean code</a></li><li class="tag_QGVx"><a class="tag_zVej tagRegular_sFm0" href="/dev/docs/tags/software-craftsmanship">software craftsmanship</a></li><li class="tag_QGVx"><a class="tag_zVej tagRegular_sFm0" href="/dev/docs/tags/code-quality">code quality</a></li></ul></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/dev/docs/tech-related/Langchain/langchain-intro"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">LangChain Overview</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/dev/docs/tech-related/microservices-architecture"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Microservices Architecture</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#key-themes-and-essential-ideas" class="table-of-contents__link toc-highlight">Key Themes and Essential Ideas</a><ul><li><a href="#1-meaningful-names" class="table-of-contents__link toc-highlight">1. Meaningful Names</a></li><li><a href="#2-functions-do-one-thing" class="table-of-contents__link toc-highlight">2. Functions: Do One Thing</a></li><li><a href="#3-comments" class="table-of-contents__link toc-highlight">3. Comments</a></li><li><a href="#4-formatting" class="table-of-contents__link toc-highlight">4. Formatting</a></li><li><a href="#5-error-handling" class="table-of-contents__link toc-highlight">5. Error Handling</a></li><li><a href="#6-unit-testing" class="table-of-contents__link toc-highlight">6. Unit Testing</a></li><li><a href="#7-successive-refinement" class="table-of-contents__link toc-highlight">7. Successive Refinement</a></li><li><a href="#8-junit-internals" class="table-of-contents__link toc-highlight">8. JUnit Internals</a></li><li><a href="#9-heuristics-and-code-smells" class="table-of-contents__link toc-highlight">9. Heuristics and Code Smells</a></li><li><a href="#10-real-code-example" class="table-of-contents__link toc-highlight">10. Real Code Example</a></li></ul></li><li><a href="#key-quotes" class="table-of-contents__link toc-highlight">Key Quotes</a></li><li><a href="#conclusion" class="table-of-contents__link toc-highlight">Conclusion</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/in/joseph-he/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Linkedin<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://hejoseph.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Portfolio</a></li><li class="footer__item"><a href="https://github.com/hejoseph" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 HE Joseph.</div></div></div></footer></div>
+</body>
+</html>
