@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmydevdocs=self.webpackChunkmydevdocs||[]).push([[6541],{4877:e=>{e.exports=JSON.parse('{"tag":{"label":"branching","permalink":"/dev/docs/tags/branching","allTagsPath":"/dev/docs/tags","count":1,"items":[{"id":"Git/git-flow","title":"Gitflow","description":"What is Gitflow?","permalink":"/dev/docs/Git/git-flow"}],"unlisted":false}}')}}]);
