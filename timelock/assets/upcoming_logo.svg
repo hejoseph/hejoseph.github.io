@@ -1,0 +1,17 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Vertical timeline line -->
+  <line x1="8" y1="2" x2="8" y2="22" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Timeline dots at different positions -->
+  <circle cx="8" cy="4" r="3" fill="#3B82F6" stroke="#FFFFFF" stroke-width="1"/>
+  <circle cx="8" cy="9" r="2.5" fill="#10B981" stroke="#FFFFFF" stroke-width="1"/>
+  <circle cx="8" cy="14" r="2.5" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1"/>
+  <circle cx="8" cy="20" r="3" fill="#EF4444" stroke="#FFFFFF" stroke-width="1"/>
+  
+  
+  <!-- Optional: Small connecting lines to suggest content -->
+  <line x1="11" y1="4" x2="18" y2="4" stroke="#D1D5DB" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="11" y1="9" x2="16" y2="9" stroke="#D1D5DB" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="11" y1="14" x2="19" y2="14" stroke="#D1D5DB" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="11" y1="20" x2="17" y2="20" stroke="#D1D5DB" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
